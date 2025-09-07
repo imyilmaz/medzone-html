@@ -201,12 +201,14 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 	}
 }//menu-overlay
 .header{
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 53;
 	transition: .4s;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	.row{
 		align-items: center;
 	}
@@ -224,6 +226,15 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 			}
 			.logo-1,.logo-2,.logo-3{
 				transition: .4s;
+			}
+			.logo-1{
+				fill: #2CA9AD;
+			}
+			.logo-2{
+				fill: #2F4368;
+			}
+			.logo-3{
+				fill: #2CA9AD;
 			}
 		}
 	}
@@ -246,7 +257,7 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 			font-size: 15px;
 			padding: 40px 20px;
 			font-weight: 300;
-			color: #fff;
+			color: #2F4368;
 			transition: .4s;
 			position: relative;
 			z-index: 51;
@@ -352,7 +363,7 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 			font-size: 19px;
 			font-weight: 300;
 			line-height: 1;
-			color: #fff;
+			color: #2CA9AD;
 			transition: .4s;
 		}
 		a{
@@ -360,8 +371,38 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 			font-size: 19px;
 			font-weight: 700;
 			line-height: 1;
-			color: #fff;
+			color: #2CA9AD;
 			transition: .4s;
+		}
+	}
+	&.header-index{
+		position: fixed;
+		background: rgba(255, 255, 255, 0.0);
+		.nav{
+			a{
+				color: #fff;
+			}
+		}
+		.logo{
+			a{
+				.logo-1{
+					fill: #fff;
+				}
+				.logo-2{
+					fill: #fff;
+				}
+				.logo-3{
+					fill: #fff;
+				}
+			}
+		}
+		.support-line{
+			span{
+				color: #fff;
+			}
+			a{
+				color: #fff;
+			}
 		}
 	}
 	&.header-fixed{
@@ -824,22 +865,28 @@ p{
 }//collection
 .main-section-1{
 	background: url(../images/section-2-mask.png) bottom center no-repeat #2F4368;
-	padding-top:  230px;
+	padding-top:  130px;
 	margin-top: -230px;
 	margin-bottom: 252px;
 	.img{
 		position: relative;
+		z-index: 12;
+		pointer-events: none;
+		height: 700px;
 		margin-bottom: -230px;
 		img{
 			display: block;
 			max-width: 100%;
 			height: auto;
+			position: absolute;
+			bottom: 0;
 		}
 	}
 }//main-section-1
 .main-section-2{
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 80px;
 	.img{
 		position: relative;
 		img{
@@ -903,6 +950,7 @@ p{
 }//testimonials
 .testimonials-card{
 	text-align: center;
+	display: block;
 	p{}
 	.stars{
 		justify-content: center;
@@ -975,8 +1023,11 @@ p{
 		padding: 40px;
 		height: 100%;
 		.icon{
-			margin-left: auto;
-			margin-right: 0;
+			img{
+				display: block;
+				margin-left: auto;
+				margin-right: 0;
+			}
 		}
 		h3{
 			font-size: 35px;
@@ -992,8 +1043,21 @@ p{
 			font-weight: 300;
 		}
 		.arrow{
+			position: absolute;
+			bottom: 43px;
+			right: 43px;
+			color: #fff;
+			transition: .4s;
+			transform: translate(0,0);
 			svg{
 				display: block;
+				margin-left: auto;
+				margin-right: 0;
+			}
+		}
+		&:hover{
+			.arrow{
+				transform: translate(20px,-20px);
 			}
 		}
 	}
@@ -1063,6 +1127,9 @@ p{
 }//blog-banner-img
 .page-section-1{
 	padding: 100px 0;
+	.bg-white{
+		padding-top: 80px;
+	}
 	.head.t-center{
 		h2{
 			&:before{
@@ -1071,7 +1138,14 @@ p{
 			}
 		}
 	}
-	.text-article{
+	.text-article{}
+	.img{
+		margin-top: 80px;
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
 	}
 }//page-section-1
 .blog-list{
@@ -1220,6 +1294,8 @@ p{
 		margin-bottom: 80px;
 		background: #fff;
 		box-shadow: 0 4px 44px rgba(0,0,0,.125);
+		position: relative;
+		z-index: 8;
 	}
 }//product-section-1
 .footer{

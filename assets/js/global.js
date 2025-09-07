@@ -1,3 +1,8 @@
+AOS.init({
+    once: false,  // Animasyonlar sadece bir kez tetiklenecek
+    mobile: false, // Mobil cihazlarda AOS'u devre dışı bırakır
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const searchIcon = document.querySelector(".search-icon");
     const searchButton = searchIcon?.querySelector("button");
@@ -16,19 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const headers = document.querySelectorAll(".header, .header-mobil");
-
-    if (headers.length > 0) {
-        window.addEventListener("scroll", function () {
-            headers.forEach(header => {
-                if (window.scrollY > 0) {
-                    header.classList.add("header-fixed");
-                } else {
-                    header.classList.remove("header-fixed");
-                }
-            });
-        });
-    }
+    
 
     const menuLinks = document.querySelectorAll('.header .nav > ul > li > a');
     const hamburger = document.querySelector('.hamburger');
