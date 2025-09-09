@@ -108,9 +108,9 @@
             <img src="assets/images/documents-banner.jpg" alt="" />
         </div>
     </div><!-- medzone-banner -->
-    <div class="page-section-1" style="margin-top:-310px">
+    <div class="page-section-1 mt-setting" style="margin-top:-310px">
         <div class="container">
-            <div class="bg-white">
+            <div class="bg-white pb-80">
                 <div class="row">
                     <div class="col col-12 col-lg-1"></div>
                     <div class="col col-12 col-lg-10">
@@ -174,34 +174,68 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-12 col-lg-4">
-                    <div class="pdf-item">
-                        <a href="assets/catalog/fda.pdf" target="_blank">
-                            <img src="assets/images/document-fda.jpg" alt="" />
-                            <span class="icon">
-                                <img src="assets/images/pdf-icon.svg" alt="" />
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col col-12 col-lg-4">
-                    <div class="pdf-item">
-                        <a href="assets/catalog/declaration.pdf" target="_blank">
-                            <img src="assets/images/document-ce.jpg" alt="" />
-                            <span class="icon">
-                                <img src="assets/images/pdf-icon.svg" alt="" />
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col col-12 col-lg-4">
-                    <div class="pdf-item">
-                        <a href="assets/catalog/iso.pdf" target="_blank">
-                            <img src="assets/images/document-iso.jpg" alt="" />
-                            <span class="icon">
-                                <img src="assets/images/pdf-icon.svg" alt="" />
-                            </span>
-                        </a>
+                <div class="swiper documents-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="pdf-item">
+                                <a href="assets/catalog/fda.pdf" target="_blank">
+                                    <img src="assets/images/document-fda.jpg" alt="" />
+                                    <span class="icon">
+                                        <img src="assets/images/pdf-icon.svg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pdf-item">
+                                <a href="assets/catalog/declaration.pdf" target="_blank">
+                                    <img src="assets/images/document-ce.jpg" alt="" />
+                                    <span class="icon">
+                                        <img src="assets/images/pdf-icon.svg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pdf-item">
+                                <a href="assets/catalog/iso.pdf" target="_blank">
+                                    <img src="assets/images/document-iso.jpg" alt="" />
+                                    <span class="icon">
+                                        <img src="assets/images/pdf-icon.svg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pdf-item">
+                                <a href="assets/catalog/fda.pdf" target="_blank">
+                                    <img src="assets/images/document-fda.jpg" alt="" />
+                                    <span class="icon">
+                                        <img src="assets/images/pdf-icon.svg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pdf-item">
+                                <a href="assets/catalog/declaration.pdf" target="_blank">
+                                    <img src="assets/images/document-ce.jpg" alt="" />
+                                    <span class="icon">
+                                        <img src="assets/images/pdf-icon.svg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pdf-item">
+                                <a href="assets/catalog/iso.pdf" target="_blank">
+                                    <img src="assets/images/document-iso.jpg" alt="" />
+                                    <span class="icon">
+                                        <img src="assets/images/pdf-icon.svg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,7 +277,29 @@
     </div><!-- footer -->
     <script src="assets/plugins/jquery-3.7.1.min.js"></script>
     <script src="assets/plugins/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
     <script src="assets/plugins/aos/aos.js"></script>
     <script src="assets/js/global.js"></script>
+    <script>
+        var documentSlider = new Swiper(".documents-section .documents-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
 </body>
 </html>
