@@ -1564,6 +1564,12 @@ p{
 				display: grid;
 				place-items: center;
 				box-shadow: 0 4px 44px rgba(0,0,0,.125);
+				@media (max-width: 768px){
+					width: 50px;
+					height: 50px;
+					padding: 10px;
+					bottom: 0px;
+				}
 			}
 		}
 	}
