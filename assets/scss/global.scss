@@ -643,7 +643,15 @@ p{
 		.swiper-slide{
 			.img{
 				height: 90vh;
+				min-height: 700px;
 				position: relative;
+				>.container{
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+				}
 				&:before{
 					content:"";
 					position: absolute;
@@ -656,17 +664,16 @@ p{
 					height: 100%;
 					object-fit: cover;
 				}
-				.text-article{
-					position: relative;
-					height: 100%;
-				}
 				.text{
 					position: absolute;
-					left: 0;
-					width: 100%;
-					bottom: 45vh;
-					transform: translateY(50%);
+					left: 50%;
+					width: 66%;
+					top: 50%;
+					transform: translateY(-50%) translateX(-50%);
 					text-align: center;
+					@media (max-width: 992px){
+						width: 100%;
+					}
 					h1{
 						font-size: 50px;
 						font-weight: 700;
@@ -1567,7 +1574,7 @@ p{
 			img{
 				display: block;
 				max-width: 100%;
-				height: auto;
+				height: 120px;
 				margin: 0 auto;
 			}
 		}
