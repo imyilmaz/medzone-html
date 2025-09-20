@@ -981,6 +981,18 @@ p{
 	}
 	.logos-slider{
 		padding-top: 80px;
+		.head{
+			text-align: left;
+			h2{
+				font-size: 34px;
+				font-weight: 400;
+				color: #000;
+				margin-bottom: 30px;
+				&:before{
+					display: none;
+				}
+			}
+		}
 		.logos-swiper{
 			.swiper-slide{
 				.img{
