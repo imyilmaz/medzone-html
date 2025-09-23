@@ -675,9 +675,9 @@ p{
 						width: 100%;
 					}
 					h1{
-						font-size: 50px;
+						font-size: 40px;
 						font-weight: 700;
-						line-height: 1;
+						line-height: 1.45;
 						color: #fff;
 						margin-bottom: 110px;
 						position: relative;
@@ -698,26 +698,26 @@ p{
 						}
 					}
 					p{
-						font-size: 37px;
-						line-height: 1;
+						font-size: 32px;
+						line-height: 1.45;
 						font-weight: 300;
 						color: #fff;
 						margin-bottom: 15px;
 					}
 					@media (max-width: 992px){
 						h1{
-							font-size: 40px;
+							font-size: 32px;
 						}
 						p{
-							font-size: 30px;
+							font-size: 26px;
 						}
 					}
 					@media (max-width: 768px){
 						h1{
-							font-size: 34px;
+							font-size: 24px;
 						}
 						p{
-							font-size: 26px;
+							font-size: 18px;
 						}
 					}
 				}
@@ -1196,9 +1196,17 @@ p{
 				width: 100%;
 			}
 		}
+		.name{
+			display: block;
+			position: absolute;
+			right: 73px;
+			bottom: 28px;
+			color: #fff;
+			transform: translate(0,0);
+		}
 		.arrow{
 			position: absolute;
-			bottom: 43px;
+			bottom: 33px;
 			right: 43px;
 			color: #fff;
 			transition: .4s;
