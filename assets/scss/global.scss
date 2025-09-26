@@ -438,6 +438,7 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 		}
 	}
 	@media (max-width: 991px){
+		position: fixed;
 		right: 0;
 		left: 0;
 		width: 0px;
